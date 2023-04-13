@@ -1,6 +1,6 @@
 <script>
 	import Button from "@smui/button";
-	import banner from "$lib/assets/banner.jpg";
+
 	export let data;
 </script>
 
