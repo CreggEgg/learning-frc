@@ -28,7 +28,7 @@
 
 		flex-direction: column;
 		margin: none;
-		background-image: url("https://media.discordapp.net/attachments/1044080898905231430/1096184886315991152/banner.jpg?width=1014&height=676");
+		background-image: url("/images/banner.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		color: white;
