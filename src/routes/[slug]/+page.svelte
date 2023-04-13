@@ -107,7 +107,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 10vh;
+		gap: 3vh;
 		overflow: hidden;
 	}
 	.video {
