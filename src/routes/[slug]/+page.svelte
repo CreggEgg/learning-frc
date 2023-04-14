@@ -36,13 +36,15 @@
 		<div class="videolist">
 			{#each data.videos as video, i}
 				<div class="videolink">
-					<Button style="width: 100%;" class="videobutton" variant="raised">
-						<a
-							href={`/${data.slug}?index=${i}`}
-							on:click={() => {
-								index = i;
-							}}>{i + 1} {video.title}</a
-						></Button
+					<a
+						href={`/${data.slug}?index=${i}`}
+						on:click={() => {
+							console.log("clicked");
+							index = i;
+						}}
+						><Button style="width: 100%;" class="videobutton" variant="raised">
+							{i + 1} {video.title}</Button
+						></a
 					>
 				</div>
 			{/each}
