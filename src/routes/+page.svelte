@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import Button from "@smui/button";
-
-	export let data;
+	import type { CourseData } from "$lib/types";
+	export let data: { courses: CourseData[] };
 </script>
 
 <main>

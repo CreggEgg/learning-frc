@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import type SupabaseClient from "@supabase/supabase-js/dist/module/SupabaseClient";
 import { env } from "$env/dynamic/private";
+import type { CourseData, VideoData } from "$lib/types";
 
 let client: SupabaseClient | null = null;
 
@@ -62,14 +63,3 @@ export async function getCourses() {
 
 	return [];
 }
-
-export type VideoData = {
-	title: string;
-	url: string;
-	challengeurl: string;
-};
-
-export type CourseData = {
-	title: string;
-	id: string;
-};

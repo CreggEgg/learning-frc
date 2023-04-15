@@ -1,14 +1,9 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 	import { page } from "$app/stores";
+	import type { VideoData } from "$lib/types";
 
 	import Button from "@smui/button";
-
-	type VideoData = {
-		title: string;
-		url: string;
-		challengeurl: string;
-	};
 
 	export let data: { videos: VideoData[]; slug: string } | null;
 	let selectedVideo: VideoData | undefined;
@@ -60,11 +55,14 @@
 						allowfullscreen
 					/>
 				</div>
-				<a href={selectedVideo.challengeurl} target="_blank"
-					><Button style="width: 100%;" class="videobutton" variant="raised">
-						Try the challenge!
-					</Button></a
-				>
+
+				{#each selectedVideo.challenges as challenge}
+					<a href={challenge.url} target="_blank"
+						><Button style="width: 100%;" class="videobutton" variant="raised">
+							{challenge.callToAction}!
+						</Button></a
+					>
+				{/each}
 			</div>
 		{/if}
 	{:else}
