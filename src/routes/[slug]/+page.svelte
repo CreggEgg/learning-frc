@@ -18,9 +18,8 @@
 		Object.keys(data).length > 0
 	) {
 		selectedVideo = data.videos[index];
-		console.log(selectedVideo);
 	}
-	console.log("vid", data);
+
 	if (indexParam !== null) {
 		index = parseInt(indexParam);
 	}
@@ -34,7 +33,6 @@
 					<a
 						href={`/${data.slug}?index=${i}`}
 						on:click={() => {
-							console.log("clicked");
 							index = i;
 						}}
 						><Button style="width: 100%;" class="videobutton" variant="raised">
@@ -90,12 +88,12 @@
 	}
 
 	.videolink {
-		width: 100%;
-
 		text-align: center;
 		padding-top: 0.2rem;
 		padding-bottom: 0.2rem;
 		border-radius: 10px;
+		margin: 5%;
+		margin-right: 5%;
 	}
 	a {
 		text-decoration: none;

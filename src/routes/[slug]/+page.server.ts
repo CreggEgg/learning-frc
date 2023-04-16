@@ -5,7 +5,6 @@ export async function load({ params, url }) {
 	let videos = await getVideos(params.slug);
 
 	if (videos !== null && videos.length > 0) {
-		console.log("videos", videos);
 		return { videos, slug: params.slug };
 	} else {
 		error(404);
