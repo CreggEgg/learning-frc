@@ -10,6 +10,8 @@ export type Challenge = {
 };
 
 export type CourseData = {
-	title: string;
+	description: string;
+	topic: string;
 	id: string;
+	image: string;
 };
